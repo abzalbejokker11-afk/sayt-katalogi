@@ -1,0 +1,22 @@
+# Maxfiylik va Xavfsizlik (Security Shield)
+.env
+*.env
+.env.*
+*.key
+*.pem
+*.token
+*.secret
+
+# Yordamchi skriptlar va keshlar
+*.py
+*.pyc
+__pycache__/
+*.log
+temp_*
+
+# Mahalliy nusxalar
+Katalog Sayta.html
+
+# Tizim fayllari
+.DS_Store
+Thumbs.db
