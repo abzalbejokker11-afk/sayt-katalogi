@@ -1787,12 +1787,12 @@ dialog::backdrop {
   justify-content: center;
   gap: 6px;
   background: var(--ac);
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 9px 14px;
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: background 0.15s;
 }
 .world-btn-visit:hover {
@@ -1814,9 +1814,189 @@ dialog::backdrop {
   color: var(--ac);
 }
 
+/* Header & Launchpad */
+.gh-header-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 7px;
+  background: #181717;
+  color: #ffffff !important;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s var(--ease);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+.gh-header-btn:hover {
+  background: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.gh-star-pill {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffd700;
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 9999px;
+  font-weight: 700;
+}
+.world-header-btn {
+  background: var(--ac-subtle) !important;
+  color: var(--ac) !important;
+  border: 1px solid var(--bd-hover) !important;
+  font-weight: 700 !important;
+  border-radius: var(--radius-full) !important;
+  padding: 6px 12px !important;
+  flex-shrink: 0;
+}
+.world-header-btn:hover {
+  background: var(--ac) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+.quick-floating-pill {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--bd-hover);
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+.qf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+.qf-world {
+  background: var(--ac);
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px var(--ac-glow);
+}
+.qf-world:hover {
+  background: var(--ac-hover);
+  transform: translateY(-1px);
+}
+.qf-gh {
+  background: var(--card-subtle);
+  color: var(--fg) !important;
+  border-color: var(--bd);
+}
+.qf-gh:hover {
+  border-color: var(--ac);
+  color: var(--ac) !important;
+  transform: translateY(-1px);
+}
+.qf-top {
+  background: var(--card-subtle);
+  color: var(--mu) !important;
+  border-color: var(--bd);
+  padding: 7px 11px;
+}
+.qf-top:hover {
+  color: var(--fg) !important;
+}
+
+/* Hero Launchpad */
+.hero-launchpad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  max-width: 960px;
+  margin: 22px auto 8px;
+  text-align: left;
+}
+.launch-tile {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+  transition: all 0.2s var(--spring, cubic-bezier(0.16, 1, 0.3, 1));
+}
+.launch-tile:hover {
+  border-color: var(--bd-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.launch-tile.highlight {
+  border-color: var(--ac);
+  background: linear-gradient(135deg, var(--ac-subtle) 0%, var(--card) 100%);
+}
+.launch-tile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.launch-tile-icon {
+  font-size: 20px;
+}
+.launch-tile-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background: var(--ac-subtle);
+  color: var(--ac);
+}
+.launch-tile h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0 0 3px;
+  color: var(--fg);
+}
+.launch-tile p {
+  font-size: 11.5px;
+  color: var(--mu);
+  margin: 0 0 8px;
+  line-height: 1.45;
+}
+.launch-tile-cta {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ac);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
 </style></head><body>
 <a class="skip-link" href="#m">Asosiy kontentga o‘tish</a>
-<header id="hd"><div class="w"><b class="lg" role="heading" aria-level="1">Ilhom Katalogi</b><input id="q" type="search" aria-label="Katalog bo‘yicha qidirish" autocomplete="off" placeholder="Qidirish: nom, muallif, kod…"><button id="cmdBtn" title="Buyruqlar palitrasi (Ctrl+K)">⚡ Buyruqlar <kbd>Ctrl+K</kbd></button><button id="fv">★ Tanlanganlar</button><button id="sndBtn" title="Tovushli mikro-interaksiya">🔊 Ovoz: On</button><button id="th">Mavzu</button><button id="tw">Tailwind ulash</button><button id="helpBtn" aria-haspopup="dialog">Yordam</button></div><nav id="tabs"></nav><nav id="subs"></nav><nav id="chips"></nav><div id="uxbar"><span id="statusText" role="status" aria-live="polite">Katalog tayyor</span><span class="grow"></span><span><kbd>/</kbd> qidiruv · <kbd>?</kbd> yordam · <kbd>Esc</kbd> yopish</span></div></header>
+<header id="hd"><div class="w"><b class="lg" role="heading" aria-level="1">Ilhom Katalogi</b>
+<a href="https://github.com/abzalbejokker11-afk/sayt-katalogi" target="_blank" rel="noopener noreferrer" class="gh-header-btn" title="GitHub Repozitoriyga to‘g‘ridan-to‘g‘ri kirish">
+  <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+  <span>GitHub Repo</span>
+  <span class="gh-star-pill">★ Star</span>
+</a>
+<button onclick="go('world','all')" class="world-header-btn" title="Dunyo bo‘yicha 30 ta eng sara sayt katalogi">
+  🌐 30 Sayt
+</button><input id="q" type="search" aria-label="Katalog bo‘yicha qidirish" autocomplete="off" placeholder="Qidirish: nom, muallif, kod…"><button id="cmdBtn" title="Buyruqlar palitrasi (Ctrl+K)">⚡ Buyruqlar <kbd>Ctrl+K</kbd></button><button id="fv">★ Tanlanganlar</button><button id="sndBtn" title="Tovushli mikro-interaksiya">🔊 Ovoz: On</button><button id="th">Mavzu</button><button id="tw">Tailwind ulash</button><button id="helpBtn" aria-haspopup="dialog">Yordam</button></div><nav id="tabs"></nav><nav id="subs"></nav><nav id="chips"></nav><div id="uxbar"><span id="statusText" role="status" aria-live="polite">Katalog tayyor</span><span class="grow"></span><span style="display:inline-flex;gap:12px;align-items:center"><a href="https://github.com/abzalbejokker11-afk/sayt-katalogi" target="_blank" rel="noopener noreferrer" style="color:var(--ac);font-weight:700;text-decoration:none">📦 GitHub Repozitoriy ↗</a> <span style="color:var(--bd)">|</span> <a href="https://github.com/abzalbejokker11-afk/sayt-katalogi/archive/refs/heads/main.zip" style="color:var(--mu);text-decoration:none" title="Butun saytni ZIP formatida kompyuterga yuklab olish">📥 Offline ZIP yuklab olish</a> <span style="color:var(--bd)">|</span> <span><kbd>/</kbd> qidiruv · <kbd>?</kbd> yordam</span></span></div></header>
 <main id="m" tabindex="-1"></main>
 <dialog id="big"><div class="w"><b id="bt" class="lg"></b><button id="bp" aria-label="Oldingisi">‹</button><button id="bn" aria-label="Keyingisi">›</button><div class="format-bar"><button id="fmtHtml" class="on">HTML/CSS</button><button id="fmtJsx">React JSX</button><button id="fmtTw">Tailwind</button></div><button id="bc" class="on">Kodni nusxalash</button><button id="bx">Yopish</button></div><div class="w"><button data-w="375px">Telefon</button><button data-w="820px">Planshet</button><button data-w="100%">Kompyuter</button><button id="bd">Qorongʻu</button></div><iframe id="bf" sandbox="allow-scripts"></iframe></dialog>
 <div id="toast" role="status" aria-live="polite"></div>
@@ -2441,7 +2621,7 @@ const MK=k=>(M.find(x=>x[2].some(s=>s[0]===k))||[k])[0];
 function go(a,b,c,kq){clearTimeout(dq);st.m=a;st.t=b;st.c=c||null;if(!kq){st.q='';$('#q').value=''}st.n=240;render();scrollTo(0,0)}
 const cnt=t=>cats(t).reduce((a,x)=>a+x[1].length,0);
 function home0(){const w=E('div'),q=st.q,tl=E('div','tiles');
- w.innerHTML='<div class="hero"><h1>🌐 Dunyo Saytlari & Dizayn Ilhom Katalogi ✦ 2026</h1><p style="font-size:16px;line-height:1.6;max-width:800px;margin:10px auto 22px;color:var(--fg)"><strong>Yangi foydalanuvchilar uchun katta imkoniyat, nafis kichik animatsiyalar va zamonaviy dizayn uchun toʻliq amaliy qoʻllanma.</strong> Dunyoning eng sara 30 ta sayti, 1000+ UI komponentlar, Taste Studio va Emil Kowalski 60 FPS harakatlari bir joyda!</p><div style="margin:16px 0;display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><button class="on" onclick="go(\'world\',\'all\')" style="padding:11px 22px;font-size:14.5px;font-weight:700;box-shadow:0 0 20px var(--ac-glow)">🌐 30 ta Dunyo Sayti (Maqtovlar) →</button><button onclick="go(\'studio\',\'motion\')" style="padding:11px 20px;font-size:14px;font-weight:600">⚡ Kichik Animatsiyalar Lab →</button><button onclick="go(\'studio\',\'taste\')" style="padding:11px 20px;font-size:14px;font-weight:600">🎨 Dizayn Qoʻllanmasi (Taste) →</button><button onclick="go(\'comp\',\'marketing\')" style="padding:11px 20px;font-size:14px;font-weight:600">🚀 Barcha Komponentlar (1000+) →</button> style="padding:10px 18px;font-size:14px;font-weight:600">🎨 Taste Studio (Did & Anti-Slop) →</button><button onclick="go(\'studio\',\'motion\')" style="padding:10px 18px;font-size:14px;font-weight:600">⚡ Emil Kowalski Harakat Lab →</button><button onclick="go(\'studio\',\'impeccable\')" style="padding:10px 18px;font-size:14px;font-weight:600">🎯 Impeccable Sayqallash →</button><button onclick="go(\'comp\',\'marketing\')" style="padding:10px 18px;font-size:14px;font-weight:600">🚀 Barcha Komponentlar →</button></div></div><div class="studio-grid" style="margin:20px 0 24px"><div class="taste-card" style="cursor:pointer;border-color:var(--ac);background:var(--ac-subtle)" onclick="go(\'world\',\'all\')"><div style="font-size:24px;margin-bottom:6px">🌐</div><h3 style="margin:0 0 4px">Dunyo Saytlari (Top 30)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Awwwards, Linear, Stripe va 30 ta jahon yetakchilari sharhi va maqtovlari.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'taste\')"><div style="font-size:24px;margin-bottom:6px">🎨</div><h3 style="margin:0 0 4px">Taste Studio (Anti-Slop)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Awwwards didi, luxury rang palitralari va 1-click CSS design tokens.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'motion\')"><div style="font-size:24px;margin-bottom:6px">⚡</div><h3 style="margin:0 0 4px">Emil Kowalski Harakat</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Linear & Vercel 60 FPS spring animatsiyalari va prujina simulyatori.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'impeccable\')"><div style="font-size:24px;margin-bottom:6px">🎯</div><h3 style="margin:0 0 4px">Impeccable Sayqallash</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">/polish, /bolder va /critique orqali dizayn nuqsonlarini bartaraf etish.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'ai\',\'ai\')"><div style="font-size:24px;margin-bottom:6px">🤖</div><h3 style="margin:0 0 4px">AI & Promptlar (36+)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Landing, Dashboard, E-Commerce, Anti-Slop tizimli promptlar.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'style\',\'glass_gen\')"><div style="font-size:24px;margin-bottom:6px">🔮</div><h3 style="margin:0 0 4px">Glass & Shadow Studio</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Jonli slayderlar orqali Liquid Glass va nozik soyalarni generatsiya qiling.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'style\',\'btn_forge\')"><div style="font-size:24px;margin-bottom:6px">⚡</div><h3 style="margin:0 0 4px">Button Forge (16)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Linear shimmer, Border beam, Cyberpunk tugmalari.</p></div></div>';
+ w.innerHTML='<div class="hero"><h1>🌐 Dunyo Saytlari & Dizayn Ilhom Katalogi ✦ 2026</h1><p style="font-size:16px;line-height:1.6;max-width:800px;margin:10px auto 16px;color:var(--fg)"><strong>Yangi foydalanuvchilar uchun katta imkoniyat, nafis kichik animatsiyalar va zamonaviy dizayn uchun toʻliq amaliy qoʻllanma.</strong> Dunyoning eng sara 30 ta sayti, 1000+ UI komponentlar, Taste Studio va Emil Kowalski 60 FPS harakatlari bir joyda!</p>' + getHeroLaunchpadHtml() + '<div style="margin:18px 0;display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><button class="on" onclick="go(\'world\',\'all\')" style="padding:11px 22px;font-size:14.5px;font-weight:700;box-shadow:0 0 20px var(--ac-glow)">🌐 30 ta Dunyo Sayti (Maqtovlar) →</button><button onclick="go(\'studio\',\'motion\')" style="padding:11px 20px;font-size:14px;font-weight:600">⚡ Kichik Animatsiyalar Lab →</button><button onclick="go(\'studio\',\'taste\')" style="padding:11px 20px;font-size:14px;font-weight:600">🎨 Dizayn Qoʻllanmasi (Taste) →</button><button onclick="go(\'comp\',\'marketing\')" style="padding:11px 20px;font-size:14px;font-weight:600">🚀 Barcha Komponentlar (1000+) →</button> style="padding:10px 18px;font-size:14px;font-weight:600">🎨 Taste Studio (Did & Anti-Slop) →</button><button onclick="go(\'studio\',\'motion\')" style="padding:10px 18px;font-size:14px;font-weight:600">⚡ Emil Kowalski Harakat Lab →</button><button onclick="go(\'studio\',\'impeccable\')" style="padding:10px 18px;font-size:14px;font-weight:600">🎯 Impeccable Sayqallash →</button><button onclick="go(\'comp\',\'marketing\')" style="padding:10px 18px;font-size:14px;font-weight:600">🚀 Barcha Komponentlar →</button></div></div><div class="studio-grid" style="margin:20px 0 24px"><div class="taste-card" style="cursor:pointer;border-color:var(--ac);background:var(--ac-subtle)" onclick="go(\'world\',\'all\')"><div style="font-size:24px;margin-bottom:6px">🌐</div><h3 style="margin:0 0 4px">Dunyo Saytlari (Top 30)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Awwwards, Linear, Stripe va 30 ta jahon yetakchilari sharhi va maqtovlari.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'taste\')"><div style="font-size:24px;margin-bottom:6px">🎨</div><h3 style="margin:0 0 4px">Taste Studio (Anti-Slop)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Awwwards didi, luxury rang palitralari va 1-click CSS design tokens.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'motion\')"><div style="font-size:24px;margin-bottom:6px">⚡</div><h3 style="margin:0 0 4px">Emil Kowalski Harakat</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Linear & Vercel 60 FPS spring animatsiyalari va prujina simulyatori.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'impeccable\')"><div style="font-size:24px;margin-bottom:6px">🎯</div><h3 style="margin:0 0 4px">Impeccable Sayqallash</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">/polish, /bolder va /critique orqali dizayn nuqsonlarini bartaraf etish.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'ai\',\'ai\')"><div style="font-size:24px;margin-bottom:6px">🤖</div><h3 style="margin:0 0 4px">AI & Promptlar (36+)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Landing, Dashboard, E-Commerce, Anti-Slop tizimli promptlar.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'style\',\'glass_gen\')"><div style="font-size:24px;margin-bottom:6px">🔮</div><h3 style="margin:0 0 4px">Glass & Shadow Studio</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Jonli slayderlar orqali Liquid Glass va nozik soyalarni generatsiya qiling.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'style\',\'btn_forge\')"><div style="font-size:24px;margin-bottom:6px">⚡</div><h3 style="margin:0 0 4px">Button Forge (16)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Linear shimmer, Border beam, Cyberpunk tugmalari.</p></div></div>';
  const tileKeys = DS.concat(['sites','links','icons','ai','glass_gen','btn_forge','mesh_gen','grad','pal','font']);
  tileKeys.forEach(k=>{
    const l = k==='ai'?'AI & Promptlar (36+)':k==='glass_gen'?'Glass Studio':k==='btn_forge'?'Button Forge (16)':k==='mesh_gen'?'Fon Generator (8)':k==='grad'?'Gradientlar (120+)':k==='pal'?'Palitralar (90+)':k==='font'?'Shriftlar (24+)':(M.flatMap(x=>[x,...(x[2]||[])]).find(s=>s[0]===k)||['',k])[1];
@@ -2503,6 +2683,31 @@ const WORLD_30 = [{"id": "awwwards", "name": "Awwwards", "domain": "awwwards.com
 
 let currentWorldCat = 'all';
 let currentWorldQuery = '';
+
+function getHeroLaunchpadHtml() {
+  return '<div class="hero-launchpad">' +
+    '<a href="https://github.com/abzalbejokker11-afk/sayt-katalogi" target="_blank" rel="noopener noreferrer" class="launch-tile highlight">' +
+      '<div class="launch-tile-top"><span class="launch-tile-icon">🐙</span><span class="launch-tile-badge">Ochiq Kod</span></div>' +
+      '<h4>GitHub Repozitoriy</h4><p>To‘liq kodlar, README yo‘riqnoma va ochiq loyiha resurslari.</p>' +
+      '<span class="launch-tile-cta">GitHub’da ochish ↗</span>' +
+    '</a>' +
+    '<div onclick="go(\'world\',\'all\')" class="launch-tile highlight">' +
+      '<div class="launch-tile-top"><span class="launch-tile-icon">🌐</span><span class="launch-tile-badge">TOP 30</span></div>' +
+      '<h4>30 ta Dunyo Sayti</h4><p>Awwwards, Linear, Stripe va jahon yetakchilari maqtovlari.</p>' +
+      '<span class="launch-tile-cta">Katalogga oʻtish →</span>' +
+    '</div>' +
+    '<a href="https://github.com/abzalbejokker11-afk/sayt-katalogi/archive/refs/heads/main.zip" class="launch-tile">' +
+      '<div class="launch-tile-top"><span class="launch-tile-icon">📥</span><span class="launch-tile-badge">Bepul Offline</span></div>' +
+      '<h4>Offline ZIP Yuklab Olish</h4><p>Kompyuterda internetsiz ham ikki marta bosib to‘liq ishlatish.</p>' +
+      '<span class="launch-tile-cta">ZIP yuklab olish (.zip) ⬇</span>' +
+    '</a>' +
+    '<a href="https://github.com/abzalbejokker11-afk" target="_blank" rel="noopener noreferrer" class="launch-tile">' +
+      '<div class="launch-tile-top"><span class="launch-tile-icon">👤</span><span class="launch-tile-badge">Muallif</span></div>' +
+      '<h4>abzalbejokker11-afk</h4><p>Saydaliyev Muhammad Sodiq rasmiy GitHub sahifasi.</p>' +
+      '<span class="launch-tile-cta">Profilga oʻtish ↗</span>' +
+    '</a>' +
+  '</div>';
+}
 
 function worldSitesView(cat = 'all') {
   if (cat && cat !== 'world') currentWorldCat = cat;
@@ -3378,4 +3583,19 @@ function home(){const w=home0();w.prepend(statsStrip());return w}
 })();
 
 </script>
+
+<!-- Tezkor Kirish va Qaytish Paneli (Floating Quick Access) -->
+<div id="quickLaunchBar" class="quick-floating-pill" aria-label="Tezkor navigatsiya">
+  <button onclick="go('world','all');AudioFX.pop(700,0.04)" title="30 ta dunyo saytiga o‘tish" class="qf-btn qf-world">
+    🌐 30 Sayt
+  </button>
+  <a href="https://github.com/abzalbejokker11-afk/sayt-katalogi" target="_blank" rel="noopener noreferrer" title="GitHub Repozitoriyga o‘tish" class="qf-btn qf-gh">
+    <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+    GitHub Repo ↗
+  </a>
+  <button onclick="scrollTo({top:0,behavior:'smooth'});AudioFX.pop(500,0.03)" title="Sahifa tepasiga qaytish" class="qf-btn qf-top">
+    ↑ Yuqoriga
+  </button>
+</div>
+
 </body></html>
