@@ -2620,21 +2620,37 @@ new MutationObserver(()=>document.querySelectorAll('.ic:not([tabindex]),.gr:not(
 const MK=k=>(M.find(x=>x[2].some(s=>s[0]===k))||[k])[0];
 function go(a,b,c,kq){clearTimeout(dq);st.m=a;st.t=b;st.c=c||null;if(!kq){st.q='';$('#q').value=''}st.n=240;render();scrollTo(0,0)}
 const cnt=t=>cats(t).reduce((a,x)=>a+x[1].length,0);
-function home0(){const w=E('div'),q=st.q,tl=E('div','tiles');
- w.innerHTML='<div class="hero"><h1>🌐 Dunyo Saytlari & Dizayn Ilhom Katalogi ✦ 2026</h1><p style="font-size:16px;line-height:1.6;max-width:800px;margin:10px auto 16px;color:var(--fg)"><strong>Yangi foydalanuvchilar uchun katta imkoniyat, nafis kichik animatsiyalar va zamonaviy dizayn uchun toʻliq amaliy qoʻllanma.</strong> Dunyoning eng sara 30 ta sayti, 1000+ UI komponentlar, Taste Studio va Emil Kowalski 60 FPS harakatlari bir joyda!</p>' + getHeroLaunchpadHtml() + '<div style="margin:18px 0;display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><button class="on" onclick="go(\'world\',\'all\')" style="padding:11px 22px;font-size:14.5px;font-weight:700;box-shadow:0 0 20px var(--ac-glow)">🌐 30 ta Dunyo Sayti (Maqtovlar) →</button><button onclick="go(\'studio\',\'motion\')" style="padding:11px 20px;font-size:14px;font-weight:600">⚡ Kichik Animatsiyalar Lab →</button><button onclick="go(\'studio\',\'taste\')" style="padding:11px 20px;font-size:14px;font-weight:600">🎨 Dizayn Qoʻllanmasi (Taste) →</button><button onclick="go(\'comp\',\'marketing\')" style="padding:11px 20px;font-size:14px;font-weight:600">🚀 Barcha Komponentlar (1000+) →</button> style="padding:10px 18px;font-size:14px;font-weight:600">🎨 Taste Studio (Did & Anti-Slop) →</button><button onclick="go(\'studio\',\'motion\')" style="padding:10px 18px;font-size:14px;font-weight:600">⚡ Emil Kowalski Harakat Lab →</button><button onclick="go(\'studio\',\'impeccable\')" style="padding:10px 18px;font-size:14px;font-weight:600">🎯 Impeccable Sayqallash →</button><button onclick="go(\'comp\',\'marketing\')" style="padding:10px 18px;font-size:14px;font-weight:600">🚀 Barcha Komponentlar →</button></div></div><div class="studio-grid" style="margin:20px 0 24px"><div class="taste-card" style="cursor:pointer;border-color:var(--ac);background:var(--ac-subtle)" onclick="go(\'world\',\'all\')"><div style="font-size:24px;margin-bottom:6px">🌐</div><h3 style="margin:0 0 4px">Dunyo Saytlari (Top 30)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Awwwards, Linear, Stripe va 30 ta jahon yetakchilari sharhi va maqtovlari.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'taste\')"><div style="font-size:24px;margin-bottom:6px">🎨</div><h3 style="margin:0 0 4px">Taste Studio (Anti-Slop)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Awwwards didi, luxury rang palitralari va 1-click CSS design tokens.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'motion\')"><div style="font-size:24px;margin-bottom:6px">⚡</div><h3 style="margin:0 0 4px">Emil Kowalski Harakat</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Linear & Vercel 60 FPS spring animatsiyalari va prujina simulyatori.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'studio\',\'impeccable\')"><div style="font-size:24px;margin-bottom:6px">🎯</div><h3 style="margin:0 0 4px">Impeccable Sayqallash</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">/polish, /bolder va /critique orqali dizayn nuqsonlarini bartaraf etish.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'ai\',\'ai\')"><div style="font-size:24px;margin-bottom:6px">🤖</div><h3 style="margin:0 0 4px">AI & Promptlar (36+)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Landing, Dashboard, E-Commerce, Anti-Slop tizimli promptlar.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'style\',\'glass_gen\')"><div style="font-size:24px;margin-bottom:6px">🔮</div><h3 style="margin:0 0 4px">Glass & Shadow Studio</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Jonli slayderlar orqali Liquid Glass va nozik soyalarni generatsiya qiling.</p></div><div class="taste-card" style="cursor:pointer;border-color:var(--bd-hover)" onclick="go(\'style\',\'btn_forge\')"><div style="font-size:24px;margin-bottom:6px">⚡</div><h3 style="margin:0 0 4px">Button Forge (16)</h3><p style="margin:0;font-size:12.5px;color:var(--mu)">Linear shimmer, Border beam, Cyberpunk tugmalari.</p></div></div>';
- const tileKeys = DS.concat(['sites','links','icons','ai','glass_gen','btn_forge','mesh_gen','grad','pal','font']);
- tileKeys.forEach(k=>{
-   const l = k==='ai'?'AI & Promptlar (36+)':k==='glass_gen'?'Glass Studio':k==='btn_forge'?'Button Forge (16)':k==='mesh_gen'?'Fon Generator (8)':k==='grad'?'Gradientlar (120+)':k==='pal'?'Palitralar (90+)':k==='font'?'Shriftlar (24+)':(M.flatMap(x=>[x,...(x[2]||[])]).find(s=>s[0]===k)||['',k])[1];
-   const c = k==='ai'?'36+':k==='glass_gen'?'Studio':k==='btn_forge'?'16':k==='mesh_gen'?'8':k==='grad'?120:k==='pal'?90:k==='font'?FP.length:DS.includes(k)?cnt(k):k==='links'?GL().links.length:k==='sites'?(SITES||[]).length:k==='icons'?Object.keys(I.lucide).length+Object.keys(I.tabler).length:'';
-   const b = E('button','tile','<b>'+c+'</b>'+l);
-   b.onclick=()=>go(MK(k),k);
-   tl.append(b);
- });
- const ab=E('button','on','Saytingizni tahlil qiling');ab.onclick=()=>go('audit','audit');w.append(tl,ab);
- if(q){const r=E('div','tiles');DS.forEach(t=>cats(t).forEach(([c,a])=>{const n=hits(c,a);if(!n)return;const b=E('button','tile','<b>'+n+'</b>'+title(c)+' · '+t);b.onclick=()=>go(MK(t),t,c,1);r.append(b)}));
-  const ib=E('button','tile','<b>'+[...Object.keys(I.lucide),...Object.keys(I.tabler)].filter(x=>x.includes(q)).length+'</b>Ikonkalar: “'+q+'”');ib.onclick=()=>go('icons','icons',null,1);r.prepend(ib);w.append(E('h2','h2','Qidiruv natijalari'),r);return w}
- const L=[];['card','modal','toast'].filter(c=>GL().glass[c]).forEach(c=>L.push(mk('glass',c)[0]));Object.keys(GL().gal).forEach(c=>L.push(mk('gal',c)[0]));
- L.sort((a,b)=>a.date<b.date?1:-1);const g=E('div','grid');LIST=L.slice(0,9);LIST.forEach(it=>g.append(card(it)));w.append(E('h2','h2','Eng soʻnggi qoʻshilganlar'),g);return w}
+function home0(){
+  const w=E('div'), q=st.q;
+  const heroDiv = E('div', 'hero');
+  heroDiv.innerHTML = '<h1>🌐 Dunyo Saytlari & Dizayn Ilhom Katalogi ✦ 2026</h1>' +
+    '<p style="font-size:16px;line-height:1.6;max-width:800px;margin:10px auto 16px;color:var(--fg)">' +
+    '<strong>Yangi foydalanuvchilar uchun katta imkoniyat, nafis kichik animatsiyalar va zamonaviy dizayn uchun toʻliq amaliy qoʻllanma.</strong> ' +
+    'Dunyoning eng sara 30 ta sayti, 1000+ UI komponentlar, Taste Studio va Emil Kowalski 60 FPS harakatlari bir joyda!</p>' +
+    getHeroLaunchpadHtml();
+  w.append(heroDiv);
+
+  if (q) {
+    const r = E('div', 'tiles');
+    DS.forEach(t => cats(t).forEach(([c, a]) => {
+      const n = hits(c, a);
+      if (!n) return;
+      const b = E('button', 'tile', '<b>' + n + '</b>' + title(c) + ' · ' + t);
+      b.onclick = () => go(MK(t), t, c, 1);
+      r.append(b);
+    }));
+    const ib = E('button', 'tile', '<b>' + [...Object.keys(I.lucide), ...Object.keys(I.tabler)].filter(x => x.includes(q)).length + '</b>Ikonkalar: “' + q + '”');
+    ib.onclick = () => go('icons', 'icons', null, 1);
+    r.prepend(ib);
+    w.append(E('h2', 'h2', 'Qidiruv natijalari'), r);
+    return w;
+  }
+
+  // #comp/sites/ (30 ta Scroll & 3D saytlar hamda mashhur ochiq GitHub saytlari tahlili) to'g'ridan-to'g'ri bosh sahifada
+  const sBox = sites();
+  w.append(sBox);
+  return w;
+}
 function sett(){const w=E('div'),S=[['HyperUI','MIT',['marketing','application','neobrutalism','templates'].reduce((a,t)=>a+cnt(t),0)],['Uiverse Galaxy','MIT',cnt('gal')],['GlassKit','MIT',cnt('glass')],['Lucide','ISC',Object.keys(I.lucide).length],['Tabler Icons','MIT',Object.keys(I.tabler).length]];
  w.innerHTML='<h2 class="h2">Manbalar va litsenziyalar</h2><div class="tiles">'+S.map(([a,l,c])=>'<div class="card tile"><b>'+c+'</b>'+a+' · '+l+'</div>').join('')+'</div><h2 class="h2">Qayta qurish</h2><p class="mu">Ishga tushirish: <code>python3 build_all.py</code>, natija katalog.html. Yangi manba qoʻshish uchun skriptga yangi blok qoʻshing. Skriptni quyidan nusxalab oling.</p><h2 class="h2">Skriptlar</h2>';
  Object.entries(D.sc).forEach(([n,t])=>{const d=E('details','card'),s=E('summary','',n),p=E('pre'),b=E('button','','Nusxalash');p.textContent=t;p.style.cssText='margin:0;padding:12px;overflow:auto;max-height:420px;font-size:12px';s.style.padding='10px';b.style.margin='0 10px 10px';b.onclick=()=>copy(t);d.append(s,b,p);w.append(d)});
